@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowLeft, Users, Recycle, HeartPulse, Building, Car, Mail, FileText, Lightbulb } from 'lucide-react';
+import { ArrowLeft, Users, Recycle, HeartPulse, Building, Car, Mail, FileText, Lightbulb, BookOpen } from 'lucide-react';
 import type { Project } from '@/lib/types';
 
 const themeIcons: Record<Project['theme'], React.ReactNode> = {
@@ -68,6 +68,25 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
         </div>
 
         <div className="lg:col-span-1 space-y-6">
+          {project.proposalUrl && (
+              <Card>
+                <CardHeader>
+                  <CardTitle className="font-headline flex items-center gap-2">
+                    <BookOpen className="h-6 w-6 text-primary" />
+                    Project Proposal
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">View the original project proposal document.</p>
+                  <Button asChild className="mt-4 w-full">
+                    <a href={project.proposalUrl} target="_blank" rel="noopener noreferrer">
+                      Download PDF
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+          )}
+
           {project.continuationRequirements && (
             <Card>
               <CardHeader>

@@ -9,6 +9,7 @@ export type Project = {
   description: string;
   imageUrl: string;
   imageHint: string;
+  proposalUrl?: string; // Add this line
   continuationRequirements?: string;
   contact?: string;
 };

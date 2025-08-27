@@ -12,6 +12,7 @@ export const projects: Project[] = [
     imageHint: 'medical technology',
     continuationRequirements: 'Looking for a team with strong AI/ML and full-stack development skills to enhance diagnostic accuracy and expand the feature set.',
     contact: 'health.innovators@example.com',
+    proposalUrl: '/proposal-placeholder.pdf',
   },
   {
     id: '2',
@@ -34,6 +35,7 @@ export const projects: Project[] = [
     imageUrl: 'https://picsum.photos/600/400',
     imageHint: 'city traffic',
     contact: 'city.planners@example.com',
+    proposalUrl: '/proposal-placeholder.pdf',
   },
   {
     id: '4',
@@ -56,6 +58,7 @@ export const projects: Project[] = [
     description: 'This device, designed as a simple bracelet, tracks heart rate, body temperature, and fall detection. Data is streamed in real-time to a mobile app for family members or caregivers. The focus is on user-friendliness, long battery life, and data privacy.',
     imageUrl: 'https://picsum.photos/600/400',
     imageHint: 'wearable technology',
+    proposalUrl: '/proposal-placeholder.pdf',
   },
   {
     id: '6',
